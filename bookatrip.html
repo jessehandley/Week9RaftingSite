@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Colorado Whitewater Rafting | Book Your Trip</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles2.css">
+</head>
+
+<body>
+  <div id="content">
+    <header>
+        <div class="logo-box"><img src="logo.png" alt="Whitewater Rafting Logo"></div>
+        <nav>
+          <a id="menu-link" onclick="hamburgerMenu()">&#9776;</a>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="i-am-here"><a href="bookatrip.html">Book A Trip</a></li>
+                <li><a href="site-plan.html">Site Plan</a></li>
+            </ul>
+        </nav>
+  </header>
+  <main>
+    <div class="banner-box">
+         <img src="river-wide.jpg" alt="A scenic view of the river">
+    </div>
+    <div class="home-grid">
+              <h2 class="home-headline-1">Book Your Trip</h2>
+              <p class="home-paragraph-1">Ready to start your adventure? Great! We're excited too. Just fill out the form
+                 below and a member of our amazing team will reach out to you to work out the deails of your custom whitewater
+                 river adventure.</p>
+              <img class="home-right-img" src="deso-kayak.jpg" alt="A young man floats along in an orange kayak">
+       <fieldset id="book-fieldset">
+           <h2>
+        Contact Information
+      </h2>
+          <form>
+            <ul class="form-flex">
+              <li>
+                <p><label for="name">Name:</label> <input id="name" type="text"></p></li>
+              <li>
+                <p><label for="phone">Phone Number:</label> <input id="phone" type="text"></p></li>
+              <li>
+                <p><label for="email">Email Address:</label> <input id="email" type="email"></p></li>
+              <li>
+                <p><label for="level">Skill Level</label> 
+                             <select id="level">
+                                        <option value="expert">Expert</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="beginner">Beginner</option>
+                              </select></p>
+              </li>
+              <li>
+                <p><label for="group">Group Size:</label> 
+                                   <select id="group">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="more">Over 15</option>
+                                    </select></p>
+                </li>
+                <li>
+                  <p id="dates-wrap"><label for="datepicker, datepicker2">Dates of Interest:</label> 
+                    <input type="text" id="datepicker" style="width:80px"> <span>-</span> <input type="text" id="datepicker2" style="width:80px"></p>
+                </li>
+            </ul>
+            </form>
+                      <br>
+                      <button class="button" type="button" style="float: right;" onclick="sendForm()">Book It!</button>
+        </fieldset>
+    </div>
+  </main>
+    <footer> 
+    <p>
+      &copy; 2023 Dry Oar | <a href="aboutme.html">Jesse Handley</a> - WDD130
+    </p>
+    <div class="social">
+      <a href="https://www.facebook.com/" target="_blank"><img src="https://cdn.glitch.com/995cbc8e-1965-4e4e-be59-d0cee19fbcb1%2Ffacebook.png?v=1620453515728" alt="facebook logo"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="https://cdn.glitch.com/995cbc8e-1965-4e4e-be59-d0cee19fbcb1%2Finstagram.png?v=1620453519946" alt="instagram logo"></a>
+      <a href="https://www.twitter.com/" target="_blank"><img src="https://cdn.glitch.com/995cbc8e-1965-4e4e-be59-d0cee19fbcb1%2Ftwitter.png?v=1620453524423" alt="twitter logo"></a>
+</div>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+function hamburgerMenu(){
+	document.getElementsByClassName("menu")[0].classList.toggle("responsive");
+}
+        
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $( "#datepicker2" ).datepicker();
+  } );
+    
+    function sendForm() {
+      
+      var message = "<center><h3>Thanks! A trip advisor will contact you shortly!</h3><p>(Actually, your information did not go anywhere. This site is for design purposes only - White Water Rafting does not really exist!)</p></center>"
+      
+    document.getElementById('fieldset').innerHTML = message;
+    }
+    
+    function showTooltip() {
+   document.getElementById('tooltip-div').style.display = "block";
+      
+}
+    
+       function hideTooltip() {
+   document.getElementById('tooltip-div').style.display = "none";
+}
+      </script>
+    </footer>
+  </div>
+</body>
+
+</html>
